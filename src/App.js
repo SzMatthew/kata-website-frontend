@@ -1,14 +1,16 @@
-import './App.css';
+import React from 'react';
+import CoverImage from './Components/Cover-Image/Cover-Image.jsx';
+import Header from './Components/Header/Header.jsx';
+import Navigation from './Components/Navigation/Navigation';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <>
+      <Header />
+      <CoverImage />
+      <Navigation />
+    </>
+    
   );
 }
 
