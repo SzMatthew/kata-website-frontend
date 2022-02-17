@@ -18,6 +18,11 @@
       display: inline-block;
       cursor: pointer;
 
+      a {
+        text-decoration: none;
+        color: $letter_color;
+      }
+
       &:after {
         display: block;
         content: '';
