@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import './Navigation.scss';
 
 const Navigation = () => {
@@ -7,7 +7,7 @@ const Navigation = () => {
     <nav className='navigation-container'>
       <ul className='navigation'>
         <li className='item'>
-          <Link to={`/`}>Kezdolap</Link>
+          <Link to={`/`}>Kezdőlap</Link>
         </li>
         <li className='item'>
           <Link to={`/konzultacio-es-arak`}>Konzultáció és árak</Link>
@@ -19,7 +19,7 @@ const Navigation = () => {
           <Link to={`/folyamatrol`}>A folyamatról</Link>
         </li>
         <li className='item'>
-          <Link to={`/velemenyek`}>Vélemenyek</Link>
+          <Link to={`/velemenyek`}>Vélemények</Link>
         </li>
         <li className='item'>
           <Link to={`/kapcsolat`}>Kapcsolat</Link>
