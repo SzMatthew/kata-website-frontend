@@ -1,6 +1,6 @@
 @import '../../Variables.scss';
 
 .content-body {
-  width: $body-width;
+  max-width: $body-width;
   margin: auto;
 }
