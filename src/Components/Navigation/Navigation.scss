@@ -1,11 +1,9 @@
 @import '../../Variables.scss';
 
 .navigation-container {
-  background-color: $salmon;
-
   .navigation {
     margin: auto;
-    width: 70%;
+    width: $body-width;
     padding: 0.4rem 0;
     
     display: flex;
@@ -26,7 +24,7 @@
       &:after {
         display: block;
         content: '';
-        border-bottom: 2px solid $letter_color;  
+        border-bottom: 2px solid $salmon;  
         transform: scaleX(0);  
         transition: transform $transition-time ease-in-out;
       }
