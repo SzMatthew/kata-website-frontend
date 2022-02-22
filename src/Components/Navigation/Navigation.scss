@@ -3,17 +3,17 @@
 .navigation-container {
   .navigation {
     margin: auto;
-    width: $body-width;
     padding: 0.4rem 0;
-    
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     list-style: none;
     justify-content: space-between;
     font-size: 125%;
 
     .item {
       padding:0.4rem 0;
-      display: inline-block;
+      margin: 10px;
       cursor: pointer;
 
       a {
@@ -36,6 +36,56 @@
       &.active a{
         border-bottom: 2px solid $salmon;
       }
+    }
+  }
+
+  // SM Screen
+  @media screen and (max-width: $sm-max) {
+    .navigation {
+      max-width: 95%;
+      flex-direction: column;
+
+      .item {
+        margin: auto;
+      }
+    }
+  }
+
+  // MD Screen
+  @media screen and (min-width: $md-min) and (max-width: $md-max) {
+    .navigation {
+      max-width: 95%;
+      flex-direction: column;
+
+      .item {
+        margin: auto;
+      }
+    }
+  }
+
+  // LG Screen
+  @media screen and (min-width: $lg-min) and (max-width: $lg-max) {
+    .navigation {
+      max-width: 95%;
+      flex-direction: column;
+
+      .item {
+        margin: auto;
+      }
+    }
+  }
+
+  // XL Screen
+  @media screen and (min-width: $xl-min) and (max-width: $xl-max) {
+    .navigation {
+      max-width: 95%;
+    }
+  }
+
+  //XXL Screen
+  @media screen and (min-width: $xxl) {
+    .navigation {
+      max-width: $body-width-xl;
     }
   }
 }
