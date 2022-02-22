@@ -32,6 +32,10 @@
       &:hover:after {
         transform: scaleX(1);
       }
+
+      &.active a{
+        border-bottom: 2px solid $salmon;
+      }
     }
   }
 }
