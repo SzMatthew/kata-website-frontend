@@ -9,7 +9,7 @@ const KonzultacioItem = ({ title, price, description}) => {
         
       </div>
       <p className='description'>{description}</p>
-      <span className='price'><strong>{price} </strong>Ft/Alkalom</span>
+      <span className='price'>{price} Ft/Alkalom</span>
     </div>
   )
 }
