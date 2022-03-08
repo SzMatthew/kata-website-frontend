@@ -17,12 +17,6 @@ const Navigation = () => {
         <li className={location.pathname === '/rolam' ? 'item active' : 'item'}>
           <Link to={`/rolam`}>Rólam</Link>
         </li>
-        <li className={location.pathname === '/folyamatrol' ? 'item active' : 'item'}>
-          <Link to={'/folyamatrol'}>A folyamatról</Link>
-        </li>
-        <li className={location.pathname === '/velemenyek' ? 'item active' : 'item'}>
-          <Link to={`/velemenyek`}>Vélemények</Link>
-        </li>
         <li className={location.pathname === '/kapcsolat' ? 'item active' : 'item'}>
           <Link to={`/kapcsolat`}>Kapcsolat</Link>
         </li>

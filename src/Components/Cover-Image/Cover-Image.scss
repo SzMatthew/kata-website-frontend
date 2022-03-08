@@ -1,3 +1,39 @@
+@import '../../Variables.scss';
+
 .thumbnail {
-  width: 100%;
+  background-image: url("../../../public/thumbnail.jpg");
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  // SM Screen
+  @media screen and (max-width: $sm-max) {
+    background-position: 0 5%;
+    min-height: 80px; 
+  }
+
+  // MD Screen
+  @media screen and (min-width: $md-min) and (max-width: $md-max) {
+    min-height: 100px; 
+    background-position: 0 4%;
+  }
+
+  // LG Screen
+  @media screen and (min-width: $lg-min) and (max-width: $lg-max) {
+    min-height: 150px; 
+    background-position: top;
+  }
+
+  // XL Screen
+  @media screen and (min-width: $xl-min) and (max-width: $xl-max) {
+    min-height: 200px; 
+    background-position: top;
+  }
+
+  //XXL Screen
+  @media screen and (min-width: $xxl) {
+    min-height: 200px; 
+    background-position: 0 -2%;
+  }
 }

@@ -67,25 +67,20 @@
   @media screen and (min-width: $lg-min) and (max-width: $lg-max) {
     .navigation {
       max-width: 95%;
-      flex-direction: column;
-
-      .item {
-        margin: auto;
-      }
     }
   }
 
   // XL Screen
   @media screen and (min-width: $xl-min) and (max-width: $xl-max) {
     .navigation {
-      max-width: 95%;
+      max-width: 70%;
     }
   }
 
   //XXL Screen
   @media screen and (min-width: $xxl) {
     .navigation {
-      max-width: $body-width-xl;
+      max-width: 45%;
     }
   }
 }

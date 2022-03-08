@@ -2,6 +2,24 @@
 
 .header {
   background-color: $white_background;
-  font-size: 1.25em;
   padding: 0.75em 0;
+  display: flex;
+
+  .title {
+    margin: auto;
+  }
+
+  @media screen and (max-width: $lg-max) {
+    .title {
+      width: 95%;
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (min-width: $xl-min) {
+    .title {
+      width: $body-width-xl;
+      font-size: 1.25em;
+    }
+  }
 }
