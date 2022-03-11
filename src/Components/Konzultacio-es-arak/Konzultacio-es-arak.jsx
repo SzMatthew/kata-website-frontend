@@ -10,22 +10,13 @@ const KonzultacioEsArak = () => {
     getConsultations();
   }, []);
   
-  const getConsultations = () => {
-    fetch('http://localhost:1337/api/consultations', {
+  const getConsultations = async () => {
+    const response = await fetch('http://localhost:1337/api/consultations', {
       headers: new Headers({
         'Authorization': `Bearer ${envVariables.API_TOKEN}`
-    })})
-      .then(response => {
-          if (response.ok) {
-              return response.json();
-          } else {
-              throw new Error('Something went wrong!');
-          }})
-      .then(data => {
-        setConsultations(data.data);
-      }).catch(error => {
-          console.error(`There is a problem: ${error}`);
-      });
+    })});
+    const data = await response.json(); 
+    setConsultations(data.data);
   };
 
   return (

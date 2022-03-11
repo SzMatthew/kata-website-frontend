@@ -11,23 +11,14 @@ const Kapcsolat = () => {
     getConstactInfos();
   }, []);
 
-  const getConstactInfos = () => {
-    fetch('http://localhost:1337/api/contacts', {
+  const getConstactInfos = async () => {
+    const response = await fetch('http://localhost:1337/api/contacts', {
       headers: new Headers({
         'Authorization': `Bearer ${envVariables.API_TOKEN}`
-    })})
-      .then(response => {
-          if (response.ok) {
-              return response.json();
-          } else {
-              throw new Error('Something went wrong!');
-          }})
-      .then(data => {
-        setEmail(data.data[0].attributes.email);
-        setPhone(data.data[0].attributes.phone);
-      }).catch(error => {
-          console.error(`There is a problem: ${error}`);
-      });
+    })});
+    const data = await response.json();
+    setEmail(data.data[0].attributes.email);
+    setPhone(data.data[0].attributes.phone);
   };
 
   return (
