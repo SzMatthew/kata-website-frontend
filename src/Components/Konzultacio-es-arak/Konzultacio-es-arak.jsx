@@ -1,14 +1,42 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './Konzultacio-es-arak.scss';
 import KonzultacioItem from './KonzultacioItem/KonzultacioItem';
+import envVariables from "../../EnvVariables";
 
 const KonzultacioEsArak = () => {
+  const [consultations, setConsultations] = useState();
+
+  useEffect(() => {
+    getConsultations();
+  }, []);
+  
+  const getConsultations = () => {
+    fetch('http://localhost:1337/api/consultations', {
+      headers: new Headers({
+        'Authorization': `Bearer ${envVariables.API_TOKEN}`
+    })})
+      .then(response => {
+          if (response.ok) {
+              return response.json();
+          } else {
+              throw new Error('Something went wrong!');
+          }})
+      .then(data => {
+        setConsultations(data.data);
+      }).catch(error => {
+          console.error(`There is a problem: ${error}`);
+      });
+  };
 
   return (
     <section className="content-body">
-      <KonzultacioItem title='Gyászfeldolgozás' price='10000' description='Gyászfeldolgozás mindenkinek aki szereti. Itt mindenki választ kaphat, hogy miért forog az univerzum'/>
-      <KonzultacioItem title='Egyéni tanácsadás' price='8000' description='Egyéni tanácsadás, ahol egyénileg foglalkozok mindenkivel aki szükségét érzi, hogy foglalkozva legyen vele'/>
-      <KonzultacioItem title='Gyászfeldolgozás csoport' price='9000' description='Csoportos gyászfeldolgozás. Kis csoportok mint az AA klubbokban, csak itt a gyászról lesz szó'/>
+      {
+        consultations
+        ? consultations.map(consultation => 
+            <KonzultacioItem key={consultation.id} title={consultation.attributes.name} price={consultation.attributes.price} description={consultation.attributes.description}/>
+          )
+        : <></>
+      }
     </section>
   )
 }
