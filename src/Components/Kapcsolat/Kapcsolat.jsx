@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Kapcsolat.scss';
 import { HiOutlineMail, HiOutlinePhone }  from 'react-icons/hi';
+import Loading from '../Loading/Loading';
 import envVariables from "../../EnvVariables";
 
 const Kapcsolat = () => {
@@ -22,18 +23,19 @@ const Kapcsolat = () => {
   };
 
   return (
-    <section className="contact-section">
-      <span className='contact-label'>Kapcsolat:</span>
-      <div className='wrapper'>
-        <HiOutlineMail className='icon'/>
-        <span className='email' onClick={() => window.open(`mailto:${email}`)}>{email}</span>
-      </div>
-      <div className='wrapper'>
-        <HiOutlinePhone className='icon'/>
-        <span className='phone'>{phone}</span>
-      </div>
-
-    </section>
+      email && phone
+      ? <section className="contact-section">
+          <span className='contact-label'>Kapcsolat:</span>
+          <div className='wrapper'>
+            <HiOutlineMail className='icon'/>
+            <span className='email' onClick={() => window.open(`mailto:${email}`)}>{email}</span>
+          </div>
+          <div className='wrapper'>
+            <HiOutlinePhone className='icon'/>
+            <span className='phone'>{phone}</span>
+          </div>
+        </section>
+      : <Loading/>
   )
 }
 

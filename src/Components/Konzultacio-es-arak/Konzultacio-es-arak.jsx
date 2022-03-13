@@ -1,13 +1,16 @@
 import React, {useEffect, useState} from "react";
 import './Konzultacio-es-arak.scss';
 import KonzultacioItem from './KonzultacioItem/KonzultacioItem';
+import Loading from '../Loading/Loading';
 import envVariables from "../../EnvVariables";
 
 const KonzultacioEsArak = () => {
   const [consultations, setConsultations] = useState();
 
   useEffect(() => {
-    getConsultations();
+    if (!consultations) {
+      getConsultations();
+    }
   }, []);
   
   const getConsultations = async () => {
@@ -26,7 +29,7 @@ const KonzultacioEsArak = () => {
         ? consultations.map(consultation => 
             <KonzultacioItem key={consultation.id} title={consultation.attributes.name} price={consultation.attributes.price} description={consultation.attributes.description}/>
           )
-        : <></>
+        : <Loading/>
       }
     </section>
   )

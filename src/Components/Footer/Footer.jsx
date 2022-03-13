@@ -24,21 +24,23 @@ const Footer = () => {
   };
 
   return (
-    <footer className='footer-wrapper'>
-      <section className='contact'>
-        <span className='contact-label'>Kapcsolat:</span>
-        <div className='contact-item'>
-          <HiOutlineMail className='icon'/>
-          <span className='contact-item-label email' onClick={() => window.open(`mailto:${email}`)}>
-            {email}
-          </span>
-        </div>
-        <div className='contact-item'>
-          <HiOutlinePhone className='icon'/>
-          <span className='contact-item-label'>{phone}</span>
-        </div>
-      </section>
-    </footer>
+    email && phone
+    ? <footer className='footer-wrapper'>
+        <section className='contact'>
+          <span className='contact-label'>Kapcsolat:</span>
+          <div className='contact-item'>
+            <HiOutlineMail className='icon'/>
+            <span className='contact-item-label email' onClick={() => window.open(`mailto:${email}`)}>
+              {email}
+            </span>
+          </div>
+          <div className='contact-item'>
+            <HiOutlinePhone className='icon'/>
+            <span className='contact-item-label'>{phone}</span>
+          </div>
+        </section>
+      </footer>
+    : <></>
   )
 }
 

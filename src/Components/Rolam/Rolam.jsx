@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Loading from '../Loading/Loading.jsx';
 
 const Rolam = () => {
   return (
-    <div>Rolam</div>
+    <Loading/>
   )
 }
 
