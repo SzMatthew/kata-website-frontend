@@ -7,21 +7,24 @@ import Kezdolap from './Components/Kezdolap/Kezdolap';
 import KonzultacioEsArak from './Components/Konzultacio-es-arak/Konzultacio-es-arak';
 import Rolam from './Components/Rolam/Rolam';
 import Kapcsolat from './Components/Kapcsolat/Kapcsolat';
+import { AppProvider } from './Contexts/app-context';
+ 
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App />}>
-          <Route index element={<Kezdolap/>}/>
-          <Route path='konzultacio-es-arak' element={<KonzultacioEsArak/>}/>
-          <Route path='rolam' element={<Rolam/>}/>
-          <Route path='kapcsolat' element={<Kapcsolat/>}/>
-          <Route path='*' element={<p>404</p>}
-          />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <AppProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<App />}>
+            <Route index element={<Kezdolap/>}/>
+            <Route path='konzultacio-es-arak' element={<KonzultacioEsArak/>}/>
+            <Route path='rolam' element={<Rolam/>}/>
+            <Route path='kapcsolat' element={<Kapcsolat/>}/>
+            <Route path='*' element={<p>404</p>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,11 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect } from "react";
 import './Konzultacio-es-arak.scss';
 import KonzultacioItem from './KonzultacioItem/KonzultacioItem';
 import Loading from '../Loading/Loading';
 import envVariables from "../../EnvVariables";
+import { useAppContext } from '../../Contexts/app-context';
+
 
 const KonzultacioEsArak = () => {
-  const [consultations, setConsultations] = useState();
+  const {state: { consultations }, setConsultations} = useAppContext();
 
   useEffect(() => {
     if (!consultations) {

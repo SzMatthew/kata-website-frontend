@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './Kapcsolat.scss';
 import { HiOutlineMail, HiOutlinePhone }  from 'react-icons/hi';
 import Loading from '../Loading/Loading';
 import envVariables from "../../EnvVariables";
+import { useAppContext } from '../../Contexts/app-context';
 
 const Kapcsolat = () => {
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const {state: { contacts }, setContacts} = useAppContext();
 
   useEffect(() => {
-    getConstactInfos();
+    if (!contacts) {
+      getConstactInfos();
+    }
   }, []);
 
   const getConstactInfos = async () => {
@@ -18,21 +20,23 @@ const Kapcsolat = () => {
         'Authorization': `Bearer ${envVariables.API_TOKEN}`
     })});
     const data = await response.json();
-    setEmail(data.data[0].attributes.email);
-    setPhone(data.data[0].attributes.phone);
+    setContacts({
+      email: data.data[0].attributes.email,
+      phone: data.data[0].attributes.phone
+    });
   };
 
   return (
-      email && phone
+    contacts && contacts.email && contacts.phone
       ? <section className="contact-section">
           <span className='contact-label'>Kapcsolat:</span>
           <div className='wrapper'>
             <HiOutlineMail className='icon'/>
-            <span className='email' onClick={() => window.open(`mailto:${email}`)}>{email}</span>
+            <span className='email' onClick={() => window.open(`mailto:${contacts.email}`)}>{contacts.email}</span>
           </div>
           <div className='wrapper'>
             <HiOutlinePhone className='icon'/>
-            <span className='phone'>{phone}</span>
+            <span className='phone'>{contacts.phone}</span>
           </div>
         </section>
       : <Loading/>
