@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useMemo, useReducer } from 'react';
+import ApiCalls from '../Utils/ApiCalls';
 
 const AppContext = createContext();
 
@@ -12,6 +13,13 @@ const appReducer = (state, action) => {
       }
       case 'SET_CONTACTS': {
         return { contacts: action.payload }
+      }
+      case 'SET_INITIALE_CONTEXT': {
+        return {
+          consultations: action.payload.consultations,
+          aboutMe: action.payload.aboutMe,
+          contacts: action.payload.contacts
+        }
       }
       default: {
           throw new Error(`Unsupported action type: ${action.type}`);
@@ -51,12 +59,20 @@ const useAppContext = () => {
     }
   };
 
+  const initialLoading = async() => {
+    const consultations = await ApiCalls.getConsultations();
+    const contacts = await ApiCalls.getConstacts();
+    const aboutMe = {};
+    dispatch({type: 'SET_INITIALE_CONTEXT', payload: {consultations,aboutMe,contacts}});
+  };
+
   return {
       state,
       dispatch,
       setConsultations,
       setAboutMe,
-      setContacts
+      setContacts,
+      initialLoading
   };
 };
 
