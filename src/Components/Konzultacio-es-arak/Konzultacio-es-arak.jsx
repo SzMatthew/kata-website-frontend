@@ -11,7 +11,7 @@ const KonzultacioEsArak = () => {
   }, []);
   
   const getConsultations = async () => {
-    const response = await fetch('http://localhost:1337/api/consultations', {
+    const response = await fetch(`${envVariables.BACKEND_BASE_URL}/api/consultations`, {
       headers: new Headers({
         'Authorization': `Bearer ${envVariables.API_TOKEN}`
     })});

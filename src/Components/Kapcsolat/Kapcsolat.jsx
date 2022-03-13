@@ -12,7 +12,7 @@ const Kapcsolat = () => {
   }, []);
 
   const getConstactInfos = async () => {
-    const response = await fetch('http://localhost:1337/api/contacts', {
+    const response = await fetch(`${envVariables.BACKEND_BASE_URL}/api/contacts`, {
       headers: new Headers({
         'Authorization': `Bearer ${envVariables.API_TOKEN}`
     })});
