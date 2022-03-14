@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
-import CoverImage from './Components/Cover-Image/Cover-Image.jsx';
-import Header from './Components/Header/Header.jsx';
-import Navigation from './Components/Navigation/Navigation';
-import Footer from './Components/Footer/Footer';
+import CoverImage from './Components/Cover-Image';
+import Header from './Components/Header';
+import Navigation from './Components/Navigation';
+import Footer from './Components/Footer';
 import { useLocation } from "react-router-dom";
 import { useAppContext } from './Contexts/app-context';
 import './Global.scss';

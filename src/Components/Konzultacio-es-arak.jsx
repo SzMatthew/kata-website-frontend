@@ -1,8 +1,8 @@
 import React from "react";
-import './Konzultacio-es-arak.scss';
-import KonzultacioItem from './KonzultacioItem/KonzultacioItem';
-import Loading from '../Loading/Loading';
-import { useAppContext } from '../../Contexts/app-context';
+import './SCSS/Konzultacio-es-arak.scss';
+import KonzultacioItem from './KonzultacioItem';
+import Loading from './Loading';
+import { useAppContext } from '../Contexts/app-context';
 
 
 const KonzultacioEsArak = () => {

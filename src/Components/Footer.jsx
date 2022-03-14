@@ -1,7 +1,7 @@
 import React from 'react';
-import './Footer.scss';
+import './SCSS/Footer.scss';
 import { HiOutlineMail, HiOutlinePhone }  from 'react-icons/hi';
-import { useAppContext } from '../../Contexts/app-context';
+import { useAppContext } from '../Contexts/app-context';
 
 const Footer = () => {
   const {state: { contacts }, setContacts} = useAppContext();

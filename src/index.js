@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Kezdolap from './Components/Kezdolap/Kezdolap';
-import KonzultacioEsArak from './Components/Konzultacio-es-arak/Konzultacio-es-arak';
-import Rolam from './Components/Rolam/Rolam';
-import Kapcsolat from './Components/Kapcsolat/Kapcsolat';
+import Kezdolap from './Components/Kezdolap';
+import KonzultacioEsArak from './Components/Konzultacio-es-arak';
+import Rolam from './Components/Rolam';
+import Kapcsolat from './Components/Kapcsolat';
 import { AppProvider } from './Contexts/app-context';
  
 

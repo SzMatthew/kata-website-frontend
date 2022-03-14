@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cover-Image.scss';
+import './SCSS/Cover-Image.scss';
 
 const CoverImage = () => {
   return (

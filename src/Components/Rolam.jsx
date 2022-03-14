@@ -1,5 +1,5 @@
 import React from 'react';
-import Loading from '../Loading/Loading.jsx';
+import Loading from './Loading';
 
 const Rolam = () => {
   return (

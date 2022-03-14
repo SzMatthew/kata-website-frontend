@@ -1,5 +1,5 @@
 import React from 'react';
-import './KonzultacioItem.scss';
+import './SCSS/KonzultacioItem.scss';
 
 const KonzultacioItem = ({ title, price, description}) => {
   return (

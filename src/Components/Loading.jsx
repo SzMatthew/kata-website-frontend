@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
-import './Loading.scss';
+import './SCSS/Loading.scss';
 
 const Loading = () => {
   return (

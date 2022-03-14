@@ -1,8 +1,8 @@
 import React from 'react';
-import './Kapcsolat.scss';
+import './SCSS/Kapcsolat.scss';
 import { HiOutlineMail, HiOutlinePhone }  from 'react-icons/hi';
-import Loading from '../Loading/Loading';
-import { useAppContext } from '../../Contexts/app-context';
+import Loading from './Loading';
+import { useAppContext } from '../Contexts/app-context';
 
 const Kapcsolat = () => {
   const {state: { contacts }, setContacts} = useAppContext();
