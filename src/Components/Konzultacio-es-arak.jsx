@@ -9,15 +9,16 @@ const KonzultacioEsArak = () => {
   const {state: { consultations }, setConsultations} = useAppContext();
 
   return (
-    <section className="content-body">
-      {
-        consultations
-        ? consultations.map(consultation => 
-            <KonzultacioItem key={consultation.id} title={consultation.attributes.name} price={consultation.attributes.price} description={consultation.attributes.description}/>
-          )
-        : <Loading/>
-      }
-    </section>
+    consultations
+    ? <section className="content-body">
+        {
+          consultations.map(consultation => 
+              <KonzultacioItem key={consultation.id} title={consultation.attributes.name} price={consultation.attributes.price} description={consultation.attributes.description}/>
+            )
+          
+        }
+      </section>
+    : <Loading/>
   )
 }
 

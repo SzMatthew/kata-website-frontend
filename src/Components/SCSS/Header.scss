@@ -1,9 +1,11 @@
 @import '../../Variables.scss';
 
 .header {
+  position: relative;
   background-color: $white_background;
   padding: 0.75em 0;
   display: flex;
+  z-index: 4;
 
   .title {
     margin: auto;

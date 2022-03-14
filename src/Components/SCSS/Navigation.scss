@@ -1,6 +1,10 @@
 @import '../../Variables.scss';
 
 .navigation-container {
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+
   .navigation {
     margin: auto;
     padding: 0.4rem 0;

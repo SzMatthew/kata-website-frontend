@@ -2,10 +2,11 @@
 
 .thumbnail {
   background-image: url("../../../public/thumbnail.jpg");
-
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: contain;
+  position: relative;
+  z-index: 2;
 
   // SM Screen
   @media screen and (max-width: $sm-max) {
