@@ -1,5 +1,4 @@
 const envVariables = {
-  BACKEND_BASE_URL: 'https://kata-website-backend.herokuapp.com',
-  API_TOKEN: "d8564844352c695436600984ce39277596a5c467ddd39561e634e288f06fc409f6705c6f0986247d1dc90159da0e343279abac6dd519659558b0e71572cdd7fe5499e852f6920c49e3b5509da6fc273661c15cacb884350b8ad3a0b9d1bedf56e6deb2998faa38f4d1d3414195ea52f5499f2fbfb46ce6cb8693fd1ce70af4a5"
+  BACKEND_BASE_URL: 'https://kata-website-backend.herokuapp.com'
 };
 export default envVariables;
