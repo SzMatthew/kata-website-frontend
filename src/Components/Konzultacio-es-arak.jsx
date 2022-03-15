@@ -15,7 +15,6 @@ const KonzultacioEsArak = () => {
           consultations.map(consultation => 
               <KonzultacioItem key={consultation.id} title={consultation.attributes.name} price={consultation.attributes.price} description={consultation.attributes.description}/>
             )
-          
         }
       </section>
     : <Loading/>

@@ -1,1 +1,11 @@
 @import './Variables.scss';
+
+@keyframes slidein {
+  from {
+    margin-top: -100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
