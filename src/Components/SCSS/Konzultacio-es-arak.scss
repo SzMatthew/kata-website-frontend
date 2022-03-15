@@ -1,11 +1,7 @@
 @import '../../Variables.scss';
-@import '../../Global.scss';
 
 .content-body {
   background-color: #FFFFFF;
   max-width: $body-width-xl;
   margin: auto;
-  z-index: 1;
-  animation-duration: 0.5s;
-  animation-name: slidein;
 }

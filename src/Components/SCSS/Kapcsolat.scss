@@ -1,5 +1,4 @@
 @import '../../Variables.scss';
-@import '../../Global.scss';
 
 .contact-section {
   margin: 0 auto;
@@ -7,8 +6,6 @@
   width: fit-content;
   display: flex;
   flex-direction: column;
-  animation-duration: 0.5s;
-  animation-name: slidein;
 
   .contact-label {
     color: $dark-salmon;
