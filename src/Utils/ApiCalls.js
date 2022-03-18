@@ -15,5 +15,11 @@ export default {
       email: data.data[0].attributes.email,
       phone: data.data[0].attributes.phone
     };
+  },
+
+  getAboutMe: async () => {
+    const response = await fetch(`${envVariables.BACKEND_BASE_URL}/api/about-mes`);
+    const data = await response.json();
+    return data.data[0].attributes.about_me;
   }
 };

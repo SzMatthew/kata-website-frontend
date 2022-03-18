@@ -1,0 +1,19 @@
+@import '../../Variables.scss';
+
+.aboutme-wrapper {
+  margin: 2rem auto;
+  width: 50%;
+  font-size: 120%;
+  line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+  white-space: pre-line;
+
+  .profile-picture {
+    margin: 0 0 2rem 2rem;
+    float: right;
+    display: block;
+    max-height: 450px;
+    border-radius: 15px;
+  }
+}

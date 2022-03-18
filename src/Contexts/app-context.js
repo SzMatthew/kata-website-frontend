@@ -62,7 +62,7 @@ const useAppContext = () => {
   const initialLoading = async() => {
     const consultations = await ApiCalls.getConsultations();
     const contacts = await ApiCalls.getConstacts();
-    const aboutMe = {};
+    const aboutMe = await ApiCalls.getAboutMe();
     dispatch({type: 'SET_INITIALE_CONTEXT', payload: {consultations,aboutMe,contacts}});
   };
 

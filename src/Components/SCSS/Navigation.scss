@@ -1,10 +1,12 @@
 @import '../../Variables.scss';
+@import '../../Global.scss';
 
 .navigation-container {
   background-color: #FFFFFF;
   position: relative;
 
   .navigation {
+    position: relative;
     margin: auto;
     padding: 0.4rem 0;
     display: flex;
@@ -42,6 +44,19 @@
     }
   }
 
+  .hamburger-icon {
+    margin: 1rem auto;
+    font-size: 180%;
+    color: $dark-salmon;
+    display: none;
+  }
+
+  .slideIn {
+    display: flex;
+    animation-duration: 0.5s;
+    animation-name: slidein;
+  }
+
   // SM Screen
   @media screen and (max-width: $sm-max) {
     .navigation {
@@ -51,6 +66,10 @@
       .item {
         margin: auto;
       }
+    }
+
+    .hamburger-icon {
+      display: block;
     }
   }
 
@@ -63,6 +82,10 @@
       .item {
         margin: auto;
       }
+    }
+
+    .hamburger-icon {
+      display: block;
     }
   }
 
