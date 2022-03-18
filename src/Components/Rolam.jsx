@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Loading from './Loading';
 import { useAppContext } from '../Contexts/app-context';
 import './SCSS/Rolam.scss';
