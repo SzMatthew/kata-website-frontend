@@ -23,9 +23,35 @@
     padding: 1.25rem;
     margin: 0;
   }
+
   .price {
     display: flex;
     padding: 1.25rem;
     font-size: 110%;
+  }
+
+  // SM Screen
+  @media screen and (max-width: $sm-max) {
+    max-width: 90%;
+  }
+
+  // MD Screen
+  @media screen and (min-width: $md-min) and (max-width: $md-max) {
+    max-width: 90%;
+  }
+
+  // LG Screen
+  @media screen and (min-width: $lg-min) and (max-width: $lg-max) {
+    max-width: 75%;
+  }
+
+  // XL Screen
+  @media screen and (min-width: $xl-min) and (max-width: $xl-max) {
+    max-width: 55%;
+  }
+
+  //XXL Screen
+  @media screen and (min-width: $xxl) {
+    max-width: 40%;
   }
 }
