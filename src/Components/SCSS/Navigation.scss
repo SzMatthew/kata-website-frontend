@@ -49,6 +49,7 @@
     font-size: 180%;
     color: $dark-salmon;
     display: none;
+    cursor: pointer;
   }
 
   .slideIn {
@@ -62,6 +63,7 @@
     .navigation {
       max-width: 95%;
       flex-direction: column;
+      display: none;
 
       .item {
         margin: auto;
@@ -78,6 +80,7 @@
     .navigation {
       max-width: 95%;
       flex-direction: column;
+      display: none;
 
       .item {
         margin: auto;
@@ -93,6 +96,7 @@
   @media screen and (min-width: $lg-min) and (max-width: $lg-max) {
     .navigation {
       max-width: 95%;
+      display: flex !important;
     }
   }
 
@@ -100,6 +104,7 @@
   @media screen and (min-width: $xl-min) and (max-width: $xl-max) {
     .navigation {
       max-width: 70%;
+      display: flex !important;
     }
   }
 
@@ -107,6 +112,7 @@
   @media screen and (min-width: $xxl) {
     .navigation {
       max-width: 45%;
+      display: flex !important;
     }
   }
 }
