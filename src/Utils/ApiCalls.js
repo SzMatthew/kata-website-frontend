@@ -18,8 +18,11 @@ export default {
   },
 
   getAboutMe: async () => {
-    const response = await fetch(`${envVariables.BACKEND_BASE_URL}/api/about-mes`);
+    const response = await fetch(`${envVariables.BACKEND_BASE_URL}/api/about-mes?populate=*`);
     const data = await response.json();
-    return data.data[0].attributes.about_me;
+    return {
+      aboutMe:data.data[0].attributes.about_me,
+      pictureUrl: envVariables.BACKEND_BASE_URL + data.data[0].attributes.picture.data.attributes.url
+    };
   }
 };
