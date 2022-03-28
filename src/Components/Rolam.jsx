@@ -10,7 +10,7 @@ const Rolam = () => {
   return (
     aboutMe
     ? <article className='aboutme-wrapper'>
-        <img className='profile-picture' src='https://kata-website-backend.herokuapp.com/uploads/272940538_1962448597273807_1665509419555003232_n_ed6e817f85.jpg?updated_at=2022-03-18T19:16:13.154Z' alt='Profile'></img>
+        <img className='profile-picture' src='https://kata-website-backend.herokuapp.com/uploads/Profile_Picture_3210a06446.jpg?updated_at=2022-03-28T19:11:23.060Z' alt='Profile'></img>
         {aboutMe}
       </article> 
     : <Loading/>
