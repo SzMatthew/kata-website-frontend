@@ -8,18 +8,18 @@ const Footer = () => {
   
   return (
     contacts && contacts.email && contacts.phone
-    ? <footer className='footer-wrapper'>
+    ? <footer className='footer'>
         <section className='contact'>
-          <span className='contact-label'>Kapcsolat:</span>
-          <div className='contact-item'>
-            <HiOutlineMail className='icon'/>
-            <span className='contact-item-label email' onClick={() => window.open(`mailto:${contacts.email}`)}>
+          <span className='contact__label'>Kapcsolat:</span>
+          <div className='contact__item'>
+            <HiOutlineMail className='contact__icon'/>
+            <span className='contact__item__label contact__item__email' onClick={() => window.open(`mailto:${contacts.email}`)}>
               {contacts.email}
             </span>
           </div>
-          <div className='contact-item'>
-            <HiOutlinePhone className='icon'/>
-            <span className='contact-item-label'>{contacts.phone}</span>
+          <div className='contact__item'>
+            <HiOutlinePhone className='contact__icon'/>
+            <span className='contact__item__label'>{contacts.phone}</span>
           </div>
         </section>
       </footer>

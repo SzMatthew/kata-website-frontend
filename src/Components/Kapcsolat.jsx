@@ -9,15 +9,15 @@ const Kapcsolat = () => {
 
   return (
     contacts && contacts.email && contacts.phone
-      ? <section className="contact-section">
-          <span className='contact-label'>Kapcsolat:</span>
-          <div className='wrapper'>
-            <HiOutlineMail className='icon'/>
-            <span className='email' onClick={() => window.open(`mailto:${contacts.email}`)}>{contacts.email}</span>
+      ? <section className="contact">
+          <span className='contact__label'>Kapcsolat:</span>
+          <div className='contact__wrapper'>
+            <HiOutlineMail className='contact__icon'/>
+            <span className='contact__email' onClick={() => window.open(`mailto:${contacts.email}`)}>{contacts.email}</span>
           </div>
-          <div className='wrapper'>
-            <HiOutlinePhone className='icon'/>
-            <span className='phone'>{contacts.phone}</span>
+          <div className='contact__wrapper'>
+            <HiOutlinePhone className='contact__icon'/>
+            <span>{contacts.phone}</span>
           </div>
         </section>
       : <Loading/>

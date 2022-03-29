@@ -8,8 +8,8 @@ const Rolam = () => {
 
   return (
     aboutMe
-    ? <article className='aboutme-wrapper'>
-        <img className='profile-picture' src={aboutMe.pictureUrl} alt='Profile'></img>
+    ? <article className='aboutme'>
+        <img className='aboutme__profile-picture' src={aboutMe.pictureUrl} alt='Profile'></img>
         {aboutMe.aboutMe}
       </article> 
     : <Loading/>

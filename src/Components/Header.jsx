@@ -5,7 +5,7 @@ const Header = () => {
 
   return (
     <header className='header'>
-      <span className='title'>Szabó-Csehó Kata Pszichológus</span>
+      <span className='header__title'>Szabó-Csehó Kata Pszichológus</span>
     </header>
   )
 }

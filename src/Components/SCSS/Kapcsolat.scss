@@ -1,13 +1,13 @@
 @import '../../Variables.scss';
 
-.contact-section {
+.contact {
   margin: 0 auto;
   padding: 3rem;
   width: fit-content;
   display: flex;
   flex-direction: column;
 
-  .contact-label {
+  &__label {
     color: $dark-salmon;
     font-size: 200%;
     font-weight: 600;
@@ -25,19 +25,19 @@
     }
   }
 
-  .wrapper {
+  &__wrapper {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-
-    .icon {
-      font-size: 1.5rem;
-      color: $dark-salmon;
-      margin-right: 0.8rem;
-    }
   }
 
-  .email {
+  &__icon {
+    font-size: 1.5rem;
+    color: $dark-salmon;
+    margin-right: 0.8rem;
+  }
+
+  &__email {
     cursor: pointer;
     transition: $transition-time;
     text-decoration: underline;

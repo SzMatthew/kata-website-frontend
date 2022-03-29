@@ -1,6 +1,6 @@
 @import '../../Variables.scss';
 
-.aboutme-wrapper {
+.aboutme {
   margin: 2rem auto;
   width: 50%;
   font-size: 120%;
@@ -9,7 +9,7 @@
   text-justify: inter-word;
   white-space: pre-line;
 
-  .profile-picture {
+  &__profile-picture {
     margin: 0 0 2rem 2rem;
     float: right;
     display: block;

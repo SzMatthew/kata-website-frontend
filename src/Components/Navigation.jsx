@@ -21,17 +21,17 @@ const Navigation = () => {
   };
 
   return (
-    <div className='navigation-container'>
+    <div className='navigation'>
       {
         isOpen
-        ? <GoX onClick={handleOpen} className='hamburger-icon'/>
-        : <GoThreeBars onClick={handleOpen} className='hamburger-icon'/>
+        ? <GoX onClick={handleOpen} className='navigation__icon'/>
+        : <GoThreeBars onClick={handleOpen} className='navigation__icon'/>
       }
-      <nav ref={navigationRef} className='navigation'>
-        <Link to={`/`} className={location.pathname === '/' ? 'item active' : 'item'}>Kezdőlap</Link>
-        <Link to={`/konzultacio-es-arak`} className={location.pathname === '/konzultacio-es-arak' ? 'item active' : 'item'}>Konzultáció és árak</Link>
-        <Link to={`/rolam`} className={location.pathname === '/rolam' ? 'item active' : 'item'}>Rólam</Link>
-        <Link to={`/kapcsolat`} className={location.pathname === '/kapcsolat' ? 'item active' : 'item'}>Kapcsolat</Link>
+      <nav ref={navigationRef} className='navigation__content'>
+        <Link to={`/`} className={location.pathname === '/' ? 'navigation__item navigation__item--active' : 'navigation__item'}>Kezdőlap</Link>
+        <Link to={`/konzultacio-es-arak`} className={location.pathname === '/konzultacio-es-arak' ? 'navigation__item navigation__item--active' : 'navigation__item'}>Konzultáció és árak</Link>
+        <Link to={`/rolam`} className={location.pathname === '/rolam' ? 'navigation__item navigation__item--active' : 'navigation__item'}>Rólam</Link>
+        <Link to={`/kapcsolat`} className={location.pathname === '/kapcsolat' ? 'navigation__item navigation__item--active' : 'navigation__item'}>Kapcsolat</Link>
       </nav>
     </div>
     

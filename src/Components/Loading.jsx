@@ -4,9 +4,9 @@ import './SCSS/Loading.scss';
 
 const Loading = () => {
   return (
-    <section className='loading-wrapper'>
-      <AiOutlineLoading3Quarters className='icon'/>
-      <span className='loading-label'>Betöltés</span>
+    <section className='loading'>
+      <AiOutlineLoading3Quarters className='loading__icon'/>
+      <span className='loading__label'>Betöltés</span>
     </section>
   )
 }

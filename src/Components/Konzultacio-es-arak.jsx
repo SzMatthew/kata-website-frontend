@@ -10,7 +10,7 @@ const KonzultacioEsArak = () => {
 
   return (
     consultations
-    ? <section className="content-body">
+    ? <section className="content">
         {
           consultations.map(consultation => 
               <KonzultacioItem key={consultation.id} title={consultation.attributes.name} price={consultation.attributes.price} description={consultation.attributes.description}/>

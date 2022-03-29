@@ -1,12 +1,12 @@
 @import '../../Variables.scss';
 
-.loading-wrapper {
+.loading {
   display: flex;
   width: fit-content;
   margin: 4rem auto;
   align-items: center;
 
-  .icon {
+  &__icon {
     margin: 0.7rem;
     font-size: 2rem;
     color: $letter_color;
@@ -22,7 +22,7 @@
     }
   }
 
-  .loading-label {
+  &__label {
     font-size: 130%;
     color: $letter_color;
   }

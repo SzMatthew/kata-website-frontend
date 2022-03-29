@@ -1,6 +1,6 @@
 @import '../../Variables.scss';
 
-.footer-wrapper {
+.footer {
   display: flex;
   justify-content: center;
   padding: 1.2rem;
@@ -11,32 +11,32 @@
     font-size: 90%;
     line-height: 1.8;
 
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin: 0.5rem 0;
-
-      .icon {
-        color: $dark-salmon;
-        font-size: 1.5rem;
-        margin-right: 0.3rem
-      }
-
-      .contact-item-label {
-        font-size: 110%;
-      }
-    }
-
-    .contact-label {
+    &__label {
       font-size: 145%;
       font-weight: 700;
       color: $dark-salmon;
       cursor: default;
     }
 
-    .email {
-      text-decoration: underline;
-      cursor: pointer;
+    &__item {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem 0;
+
+      &__label {
+        font-size: 110%;
+      }
+
+      &__email {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    &__icon {
+      color: $dark-salmon;
+      font-size: 1.5rem;
+      margin-right: 0.3rem
     }
   }
 }

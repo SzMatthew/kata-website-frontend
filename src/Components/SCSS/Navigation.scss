@@ -1,11 +1,11 @@
 @import '../../Variables.scss';
 @import '../../Global.scss';
 
-.navigation-container {
+.navigation {
   background-color: #FFFFFF;
   position: relative;
 
-  .navigation {
+  &__content {
     position: relative;
     margin: auto;
     padding: 0.4rem 0;
@@ -15,34 +15,34 @@
     list-style: none;
     justify-content: space-between;
     font-size: 125%;
+  }
 
-    .item {
-      padding: 0.4rem 0.4rem;
-      margin: 10px;
-      cursor: pointer;
-      text-decoration: none;
-      color: $letter_color;
+  &__item {
+    padding: 0.4rem 0.4rem;
+    margin: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: $letter_color;
 
-      &:after {
-        display: block;
-        content: '';
-        border-bottom: 2px solid $salmon;  
-        transform: scaleX(0);  
-        transition: transform $transition-time ease-in-out;
-      }
+    &:after {
+      display: block;
+      content: '';
+      border-bottom: 2px solid $salmon;  
+      transform: scaleX(0);  
+      transition: transform $transition-time ease-in-out;
+    }
 
-      &:hover:after {
-        transform: scaleX(1);
-      }
+    &:hover:after {
+      transform: scaleX(1);
+    }
 
-      &.active:after {
-        //border-bottom: 2px solid $salmon;
-        transform: scaleX(1);
-      }
+    &--active:after {
+      //border-bottom: 2px solid $salmon;
+      transform: scaleX(1);
     }
   }
 
-  .hamburger-icon {
+  &__icon {
     margin: 1rem auto;
     font-size: 180%;
     color: $dark-salmon;
@@ -50,49 +50,43 @@
     cursor: pointer;
   }
 
-  .slideIn {
-    display: flex;
-    animation-duration: 0.5s;
-    animation-name: slidein;
-  }
-
   // SM Screen
   @media screen and (max-width: $sm-max) {
-    .navigation {
+    &__content {
       max-width: 95%;
       flex-direction: column;
       display: none;
-
-      .item {
-        margin: auto;
-      }
     }
 
-    .hamburger-icon {
+    &__item {
+      margin: auto;
+    }
+
+    &__icon {
       display: block;
     }
   }
 
   // MD Screen
   @media screen and (min-width: $md-min) and (max-width: $md-max) {
-    .navigation {
+    &__content {
       max-width: 95%;
       flex-direction: column;
       display: none;
-
-      .item {
-        margin: auto;
-      }
     }
 
-    .hamburger-icon {
+    &__item {
+      margin: auto;
+    }
+
+    &__icon {
       display: block;
     }
   }
 
   // LG Screen
   @media screen and (min-width: $lg-min) and (max-width: $lg-max) {
-    .navigation {
+    &__content {
       max-width: 95%;
       display: flex !important;
     }
@@ -100,7 +94,7 @@
 
   // XL Screen
   @media screen and (min-width: $xl-min) and (max-width: $xl-max) {
-    .navigation {
+    &__content {
       max-width: 70%;
       display: flex !important;
     }
@@ -108,7 +102,7 @@
 
   //XXL Screen
   @media screen and (min-width: $xxl) {
-    .navigation {
+    &__content {
       max-width: 50%;
       display: flex !important;
     }
