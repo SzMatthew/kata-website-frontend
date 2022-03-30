@@ -1,0 +1,23 @@
+@import '../../Variables.scss';
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand:regular);
+
+.quote {
+  margin: 6rem auto;
+  padding: 0 1.5rem;
+  width: fit-content;
+
+  &__text {
+    font-size: 150%;
+    color: $letter_color;
+    font-family: Patrick Hand;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  &__author {
+    margin-top: 1rem;
+    position: relative;
+    float: right;
+    right: -5%
+  }
+}
